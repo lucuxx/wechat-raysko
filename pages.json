@@ -8,83 +8,102 @@
 
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path": "pages/index/index",
-			"name": "index",
+			"path": "pages/home/home",
+			"name": "home",
 			"aliasPath": "/",
 			"meta": {
 				"title": "首页"
 			},
 			"style": {
-				"navigationStyle": "custom"
+				"navigationBarTitleText": "睿思科",
+				 "lazyCodeLoading": "requiredComponents"
 			}
 		}, {
-			"path": "pages/newpage/newpage",
-			"name": "newpage",
-			"aliasPath": "/newpage/:id",
+			"path": "pages/products/products",
+			"name": "products",
+			"aliasPath": "/products",
 			"meta": {
-				"title": "测试"
+				"title": "产品"
 			},
 			"style": {
-				"navigationBarTitleText": "测试",
-				"enablePullDownRefresh": false
+				"navigationBarTitleText": "产品"
 			}
 		}, {
-			"path": "pages/index/zPagingList",
-			"name": "zPagingList",
-			"aliasPath": "/zPagingList",
+			"path": "pages/about/about",
+			"name": "about",
+			"aliasPath": "/about",
 			"meta": {
-				"title": "列表"
+				"title": "关于"
 			},
 			"style": {
-				"navigationBarTitleText": "列表",
+				"navigationBarTitleText": "睿思科",
 				"enablePullDownRefresh": false
 			}
-		}, {
-			// query 方式传参
-			"path": "pages/public/richPage/richPage",
-			// params 传参
-			"name": "richPage",
-			"meta": {
-				"title": "富文本页"
-			},
-			"style": {
-				"navigationBarTitleText": "富文本页",
-				"enablePullDownRefresh": false
-			}
-
 		}
 	],
 	"subPackages": [{
 		"root": "pagesA",
 		"pages": [{
-			"path": "list/list",
-			"name": "pagesAList",
+			"path": "detail/detail",
+			"name": "detail",
 			"meta": {
-				"title": "pagesA 分包页面"
+				"title": "详情"
 			},
 			"style": {
-				"navigationBarTitleText": "pagesA 分包页面",
+				"navigationBarTitleText": "详情",
 				"enablePullDownRefresh": false
 			}
 		}]
 	}, {
 		"root": "pagesB",
 		"pages": [{
-			"path": "detail/detail",
-			"name": "pagesBDetail",
+			"path": "card/card",
+			"name": "card",
 			"meta": {
-				"title": "pagesB 分包页面"
+				"title": "名片"
 			},
 			"style": {
-				"navigationBarTitleText": "pagesB 分包页面",
-				"enablePullDownRefresh": false
+				"disableScroll":true,
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": false,
+				"navigationBarTextStyle":"white",
+				"app-plus": {
+					"titleNView": false
+				}
 			}
 		}]
 	}],
+	"tabBar": {
+		"list": [{
+				"pagePath": "pages/home/home",
+				"text": "首页",
+				"iconPath": "/static/uview/example/home.png",
+				"selectedIconPath": "/static/uview/example/home-active.png"
+			},
+			{
+				"pagePath": "pages/products/products",
+				"text": "全部分类",
+				"iconPath": "/static/uview/example/category.png",
+				"selectedIconPath": "/static/uview/example/category-active.png"
+			},
+			{
+				"pagePath": "pages/about/about",
+				"text": "关于我们",
+				"iconPath": "/static/uview/example/about.png",
+				"selectedIconPath": "/static/uview/example/about-active.png"
+			}
+		],
+		"backgroundColor": "#ffffff",
+		"borderStyle": "black",
+		"height": "98rpx",
+		"color": "#999",
+		"selectedColor": "#6083F7",
+		"fontSize": "10px"
+	},
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"navigationBarTitleText": "睿思科",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#eceef3"
 	}
 }

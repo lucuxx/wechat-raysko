@@ -22,6 +22,12 @@ Vue.use(uView);
 let vuexStore = require("@/store/$u.mixin.js");
 Vue.mixin(vuexStore);
 
+// #ifdef MP
+// 引入uView对小程序分享的mixin封装
+const mpShare = require('@/uni_modules/uview-ui/libs/mixin/mpShare.js')
+Vue.mixin(mpShare)
+// #endif
+
 // 引入扩展方法
 import '@/common/extend.js';
 

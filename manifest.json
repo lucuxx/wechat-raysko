@@ -1,9 +1,9 @@
 {
-    "name" : "uni-template",
+    "name" : "wechat-raysko",
     "appid" : "__UNI__B981B05",
-    "description" : "",
+    "description" : "睿思科微信小程序",
     "versionName" : "1.0.0",
-    "versionCode" : "100",
+    "versionCode" : 1,
     "transformPx" : false,
     /* 5+App特有相关 */
     "app-plus" : {
@@ -57,11 +57,28 @@
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
-        "appid" : "",
+        "appid" : "wx8b4432677b9c2967",
         "setting" : {
-            "urlCheck" : false
+            "urlCheck" : true,
+            "es6" : true,
+            "minified" : true,
+            "postcss" : false
         },
-        "usingComponents" : true
+        "optimization" : {
+            "subPackages" : true
+        },
+        "usingComponents" : true,
+        "permission" : {
+            "scope.userLocation" : {
+                "desc" : "您的位置信息将用于给您推荐导航路线"
+            }
+        },
+        "requiredPrivateInfos" : [
+            "getLocation",
+            "onLocationChange",
+            "startLocationUpdateBackground",
+            "chooseAddress"
+        ]
     },
     "mp-alipay" : {
         "usingComponents" : true
